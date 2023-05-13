@@ -31,6 +31,7 @@
     "preversion": "npm test",
     "postversion": "npm publish",
     "prepublishOnly": "git push origin --follow-tags"
+    "start": "node index.js"
   },
   "devDependencies": {
     "tap": "^15.0.9"

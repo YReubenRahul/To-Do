@@ -1,14 +1,38 @@
 {
-  "name": "todo-list-planner",
-  "version": "1.0.0",
-  "description": "A simple to-do list planner",
-  "main": "server.js",
-  "scripts": {
-    "start": "node server.js"
+  "name": "core-util-is",
+  "version": "1.0.3",
+  "description": "The `util.is*` functions introduced in Node v0.12.",
+  "main": "lib/util.js",
+  "files": [
+    "lib"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/isaacs/core-util-is"
   },
-  "dependencies": {
-    "body-parser": "^1.19.0",
-    "express": "^4.17.1",
-    "mongodb": "^3.6.9"
+  "keywords": [
+    "util",
+    "isBuffer",
+    "isArray",
+    "isNumber",
+    "isString",
+    "isRegExp",
+    "isThis",
+    "isThat",
+    "polyfill"
+  ],
+  "author": "Isaac Z. Schlueter <i@izs.me> (http://blog.izs.me/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/isaacs/core-util-is/issues"
+  },
+  "scripts": {
+    "test": "tap test.js",
+    "preversion": "npm test",
+    "postversion": "npm publish",
+    "prepublishOnly": "git push origin --follow-tags"
+  },
+  "devDependencies": {
+    "tap": "^15.0.9"
   }
 }
